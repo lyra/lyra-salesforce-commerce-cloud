@@ -1,0 +1,20 @@
+{
+    "hooks": [
+        {
+            "name": "app.payment.processor.lyra_collect_payment",
+            "script": "./cartridge/scripts/hooks/payment/processor/lyra_collect_payment"
+        },
+        {
+            "name": "app.payment.processor.lyra_collect_embedded_payment",
+            "script": "./cartridge/scripts/hooks/payment/processor/lyra_collect_payment"
+        },
+        {
+            "name": "app.payment.form.processor.lyra_collect_payment",
+            "script": "./cartridge/scripts/hooks/payment/processor/lyra_form_collect_payment"
+        },
+        {
+            "name": "app.payment.form.processor.lyra_collect_embedded_payment",
+            "script": "./cartridge/scripts/hooks/payment/processor/lyra_form_collect_payment"
+        }
+    ]
+}

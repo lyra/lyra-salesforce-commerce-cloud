@@ -1,0 +1,12 @@
+<div class="form-nav billing-nav payment-information"
+     data-payment-method-id="lyra"
+>
+    <ul class="nav nav-tabs nav-fill payment-options" role="tablist">
+        <isinclude template="checkout/billing/paymentOptions/paymentOptionsTabs" />
+    </ul>
+</div>
+<div class="credit-card-selection-new" >
+    <div class="tab-content">
+        <isinclude template="checkout/billing/paymentOptions/paymentOptionsContent" />
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/lyra.js');
+    assets.addCss('/css/lyra.css');
+</isscript>
+<div class="tab-pane lyra-${paymentOption.ID}-content lyra-payment-content" id="lyra-${paymentOption.ID}-content"
+    role="tabpanel">
+    <fieldset class="payment-form-fields">
+        <input type="hidden" class="form-control"
+            name="dwfrm_billing_paymentMethod"
+            value="${paymentOption.ID}"
+        />
+    </fieldset>
+</div>

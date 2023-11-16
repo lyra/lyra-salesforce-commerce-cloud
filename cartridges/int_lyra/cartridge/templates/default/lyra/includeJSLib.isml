@@ -1,0 +1,23 @@
+<isscript>
+    const customSitePrefs = dw.system.Site.current.preferences.custom;
+    const libJSUrl = customSitePrefs.lyra_js_lib_url + 'js/krypton-client/V4.0/stable/kr-payment-form.min.js'
+    if (customSitePrefs.lyra_mode.getValue() === 'PRODUCTION') {
+        var publicKey = customSitePrefs.lyra_public_key_production;
+    } else {
+        var publicKey = customSitePrefs.lyra_public_key_staging
+    }
+</isscript>
+<isif condition="${!empty(publicKey) && !empty(require('~/cartridge/scripts/util/LyraUtils').getEmbeddedPaymentMethod())}">
+    <script src="${libJSUrl}" kr-public-key="${publicKey}" kr-language="${require('dw/util/Locale').getLocale(request.getLocale()).getLanguage()}" kr-get-url-refused="${URLUtils.https('Lyra-FailOrder')}" kr-post-url-success="${URLUtils.https('Lyra-PlaceOrderEmbeddedForm')}"></script>
+    <iscomment>
+        theme and plugins. should be loaded after the javascript library
+        not mandatory but helps to have a nice payment form out of the box
+    </iscomment>
+    <isif condition="${customSitePrefs.lyra_theme == 'NEON'}">
+        <link rel="stylesheet" href="${customSitePrefs.lyra_js_lib_url}js/krypton-client/V4.0/ext/neon-reset.css"/>
+        <script src="${customSitePrefs.lyra_js_lib_url}js/krypton-client/V4.0/ext/neon.js"></script>
+    <iselse/>
+        <link rel="stylesheet" href="${customSitePrefs.lyra_js_lib_url}js/krypton-client/V4.0/ext/classic-reset.css"/>
+        <script src="${customSitePrefs.lyra_js_lib_url}js/krypton-client/V4.0/ext/classic.js"></script>
+    </isif>
+</isif>

@@ -1,0 +1,31 @@
+{
+    "step-types": {
+        "script-module-step":
+        [
+            {
+                "@type-id": "custom.LyraPaymentNotification",
+                "@supports-parallel-execution": "false",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "description": "Handle Lyra Notification",
+                "module": "int_lyra/cartridge/scripts/jobs/notification.js",
+                "function": "execute",
+                "transactional": "false",
+                "timeout-in-seconds": "900",
+                "status-codes": {
+                    "status":
+                    [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when the step failed with an error."
+                        },
+                        {
+                            "@code": "FINISHED",
+                            "description": "Used when the step finished successfully."
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
