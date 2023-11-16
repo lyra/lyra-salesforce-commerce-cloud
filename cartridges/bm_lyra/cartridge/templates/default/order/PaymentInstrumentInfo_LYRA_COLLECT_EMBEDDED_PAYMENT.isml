@@ -1,0 +1,59 @@
+<!--- TEMPLATENAME: PaymentInstrumentInfo_LYRA_CREDIT_CARD.isml --->
+<iscontent type="text/html" charset="UTF-8" compact="true">
+
+<isscript>
+	var lyraPaymentData = JSON.parse(pdict.Order.getCustom()['lyraPaymentData']);
+</isscript>
+
+<div id="Lyratable" style="margin-top: 10px;">
+    <table class="infobox w e">
+        <thead>
+            <tr>
+                <th align="left" width="150">
+                    <img border="0" src="${URLUtils.staticURL('/images/logo_lyraCollect_logo.svg')}" width="100">
+                </th>
+                <isif condition="${lyraPaymentData === null}"><th>Waiting for IPN</th><iselse/><th>Payment info</th></isif>
+            </tr>
+        </thead>
+        <isif condition="${lyraPaymentData !== null}">
+            <tbody>
+                <tr>
+                    <td class="infobox_title">${Resource.msg('order.transactionid', 'lyra', null)}</td>
+                    <td class="infobox_item">${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].transactionDetails.cardDetails.legacyTransId : lyraPaymentData.vads_auth_number}</td>
+                </tr>
+                <tr>
+                    <td class="infobox_title">${Resource.msg('order.transactionuuid', 'lyra', null)}</td>
+                    <td class="infobox_item">${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].uuid : lyraPaymentData.vads_trans_uuid}</td>
+                </tr>
+                <tr>
+                    <td class="infobox_title">${Resource.msg('order.amount.authorized', 'lyra', null)}</td>
+                    <td class="infobox_item">${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].transactionDetails.cardDetails.authorizationResponse.amount : lyraPaymentData.vads_effective_amount}</td>
+                </tr>
+                <tr>
+                    <td class="infobox_title">${Resource.msg('order.paymentmethod', 'lyra', null)}</td>
+                    <td class="infobox_item">${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].transactionDetails.cardDetails.effectiveBrand : lyraPaymentData.vads_card_brand}</td>
+                </tr>
+                <tr>
+                    <td class="infobox_title">${Resource.msg('order.card.number', 'lyra', null)}</td>
+                    <td class="infobox_item">${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].transactionDetails.cardDetails.pan : lyraPaymentData.vads_card_number}</td>
+                </tr>
+                <tr>
+                    <td class="infobox_title">${Resource.msg('order.card.date', 'lyra', null)}</td>
+                    <td class="infobox_item">${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].transactionDetails.cardDetails.expiryMonth : lyraPaymentData.vads_expiry_month} / ${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].transactionDetails.cardDetails.expiryYear : lyraPaymentData.vads_expiry_year}</td>
+                </tr>
+                <tr>
+                    <td class="infobox_title">${Resource.msg('order.3dsauth', 'lyra', null)}</td>
+                    <td class="infobox_item">${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].transactionDetails.cardDetails.authenticationResponse.value.status : lyraPaymentData.vads_auth_result}</td>
+                </tr>
+                <tr>
+                    <td class="infobox_title">${Resource.msg('order.auth.type', 'lyra', null)}</td>
+                    <td class="infobox_item">${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].transactionDetails.cardDetails.authenticationResponse.value.authenticationType : lyraPaymentData.vads_threeds_auth_type}</td>
+                </tr>
+                <tr>
+                    <td class="infobox_title">${Resource.msg('order.fraud.control', 'lyra', null)}</td>
+                    <td class="infobox_item">${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].transactionDetails.paymentMethodDetails.fraudManagement.riskAssessments : lyraPaymentData.vads_auth_mode}</td>
+                </tr>
+            </tbody>
+        </isif>
+    </table>
+</div>

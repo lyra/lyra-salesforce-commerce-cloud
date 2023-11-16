@@ -1,0 +1,5 @@
+<li class="nav-item" data-method-id="${paymentOption.ID}">
+    <a class="nav-link lyra-payment-tab" data-toggle="tab" href="${'#lyra-'+paymentOption.ID}-content" role="tab">
+        ${paymentOption.name}
+    </a>
+</li>

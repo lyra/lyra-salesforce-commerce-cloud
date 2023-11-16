@@ -1,0 +1,14 @@
+<fieldset class="payment-form-fields">
+    <input type="hidden" class="form-control"
+        name="dwfrm_billing_paymentMethod"
+        value="${pdict.paymentMethodID}"
+    />
+</fieldset>
+<div id="lyra-refresh-token" data-url="${URLUtils.http('Lyra-FormToken')}" data-config-compact="${pdict.compactMode}" data-config-groupingthreshold="${pdict.groupingThreshold}"></div>
+<div id="lyra-payment-form" data-url="${URLUtils.http('Lyra-PaymentForm')}"></div>
+
+<isif condition="${pdict.embeddedMode.getValue() === 'smartform'}">
+    <div class="js-lyraEmbedded kr-smart-form" <isif condition="${pdict.displayInPopin}">kr-popin</isif>></div>
+<iselse/>
+    <div class="js-lyraEmbedded kr-smart-form" kr-card-form-expanded <isif condition="${pdict.displayInPopin}">kr-popin</isif>></div>
+</isif>

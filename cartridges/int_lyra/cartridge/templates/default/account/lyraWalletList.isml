@@ -1,0 +1,43 @@
+<isif condition="${pdict.customerWalletList.length > 0}">
+    <div class="modal fade" id="deleteCard" tabindex="-1" role="dialog" aria-labelledby="deleteCardTitle">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header delete-card-confirmation-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="${Resource.msg('label.close.dialog.button','common',null)}"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body delete-card-confirmation-body">
+                    ${Resource.msg('deleteCard.confirmation.modal','lyra',null)}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">${Resource.msg('deleteCard.confirmation.modal.button.cancel','lyra',null)}</button>
+                    <button type="button" class="btn btn-primary delete-card-confirmation-btn"
+                            data-dismiss="modal"
+                    >${Resource.msg('deleteCard.confirmation.modal.button.confirm','lyra',null)}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header clearfix">
+            <h2 class="pull-left">${Resource.msg('label.payment','lyra',null)}</h2>
+        </div>
+        <div class="card-body card-info-group lyra">
+            <isloop items="${pdict.customerWalletList}" var="customerWallet">
+                <p>
+                    <img border="0" alt="${customerWallet.tokenDetails.effectiveBrand}" src="${URLUtils.staticURL('/images/'+ customerWallet.tokenDetails.effectiveBrand +'.png')}" width="40">
+                    ${customerWallet.tokenDetails.pan}
+                    ${customerWallet.tokenDetails.expiryMonth}/${customerWallet.tokenDetails.expiryYear}
+                    <button
+                        type="button"
+                        class="remove-btn delete-card btn-light"
+                        data-toggle="modal"
+                        data-target="#deleteCard"
+                        data-url="${URLUtils.url('Lyra-RemoveCustomerCardFromWallet', 'paymentMethodToken', customerWallet.paymentMethodToken)}"
+                        aria-label="${Resource.msg('btn.delete','lyra',null)}">
+                        ${Resource.msg('btn.delete','lyra',null)}
+                    </button>
+                </p>
+            </isloop>
+        </div>
+    </div>
+</isif>

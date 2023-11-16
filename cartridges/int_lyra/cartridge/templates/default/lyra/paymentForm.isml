@@ -1,0 +1,8 @@
+<form method="POST" action="${pdict.urlHPP}">
+    <isloop items="${Object.keys(pdict.form)}" var="key">
+        <input type="hidden" name="${key}" value="${pdict.form[key]}" />
+    </isloop>
+    <input type="submit" name="payer" value="Payer" id="js-submitLyraPayment" />
+    <input type="hidden" id="js-placeOrder" data-url="${URLUtils.url('Lyra-CreateOrderHPP')}" />
+</form>
+<span class="lyraPaymentMethodName">${pdict.paymentMethodName}</span>

@@ -1,0 +1,24 @@
+<!--- TEMPLATENAME: PaymentInstrumentInfo_LYRA_CREDIT_CARD.isml --->
+<iscontent type="text/html" charset="UTF-8" compact="true">
+<isscript>
+	var lyraPaymentData = JSON.parse(pdict.orderConfirmDetails.getCustom()['lyraPaymentData']);
+</isscript>
+
+<div id="Lyratable" style="margin-top: 10px;">
+    <table class="infobox w e">
+        <thead style="float:left;">
+            <tr>
+                <th align="left" width="150">
+                    <img border="0" src="${URLUtils.staticURL('/images/logo_lyraCollect_logo.svg')}" width="100">
+                </th>
+            </tr>
+        </thead>
+        <isif condition="${lyraPaymentData !== null}">
+            <tbody style="float:right;">
+                <tr>
+                    <td class="infobox_item">${lyraPaymentData.transactions ? lyraPaymentData.transactions[0].transactionDetails.cardDetails.effectiveBrand : lyraPaymentData.vads_card_brand}</td>
+                </tr>
+            </tbody>
+        </isif>
+    </table>
+</div>

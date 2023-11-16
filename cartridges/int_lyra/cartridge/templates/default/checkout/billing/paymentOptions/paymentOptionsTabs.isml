@@ -1,0 +1,15 @@
+<isscript>
+    const LyraUtils = require('~/cartridge/scripts/util/LyraUtils');
+</isscript>
+<div id="lyra-payment-form" data-url="${URLUtils.http('Lyra-PaymentForm')}"></div>
+<isloop items="${pdict.order.billing.payment.applicablePaymentMethods}" var="paymentOption">
+    <isif condition="${paymentOption.ID === 'CREDIT_CARD'}">
+        <isinclude template="checkout/billing/paymentOptions/creditCardTab" />
+    </isif>
+    <isscript>
+        var paymentMethod = LyraUtils.getPaymentMethodByID(paymentOption.ID);
+    </isscript>
+    <isif condition="${LyraUtils.isPaymentMethodLyra(paymentMethod)}">
+        <isinclude template="checkout/billing/paymentOptions/lyraTab" />
+    </isif>
+</isloop>

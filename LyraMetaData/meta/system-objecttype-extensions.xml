@@ -1,0 +1,1636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="lyra_api_password_staging">
+                <display-name xml:lang="de">Testpasswort</display-name>
+                <display-name xml:lang="x-default">Test password</display-name>
+                <display-name xml:lang="es">Contraseña de test</display-name>
+                <display-name xml:lang="fr">Mot de passe de test</display-name>
+                <description xml:lang="x-default">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="es">Disponible en el Back Office Lyra expert (menú: Configuración > Tiendas > Claves de API REST).</description>
+                <description xml:lang="fr">Disponible dans votre Back Office Lyra Expert (menu: Paramétrage > Boutiques > Clés d'API REST).</description>
+                <type>password</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_api_password_production">
+                <display-name xml:lang="de">Passwort Produktion</display-name>
+                <display-name xml:lang="x-default">Production password</display-name>
+                <display-name xml:lang="es">Contraseña de producción</display-name>
+                <display-name xml:lang="fr">Mot de passe de production</display-name>
+                <description xml:lang="de">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="x-default">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="es">Disponible en el Back Office Lyra expert (menú: Configuración > Tiendas > Claves de API REST).</description>
+                <description xml:lang="fr">Disponible dans votre Back Office Lyra Expert (menu: Paramétrage > Boutiques > Clés d'API REST).</description>
+                <type>password</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_js_lib_url">
+                <display-name xml:lang="de">JavaScript client URL</display-name>
+                <display-name xml:lang="x-default">JavaScript client URL</display-name>
+                <display-name xml:lang="es">URL del cliente JavaScript</display-name>
+                <display-name xml:lang="fr">URL du client JavaScript</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://static.lyra.com/static/</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_groupingthreshold">
+                <display-name xml:lang="x-default">Payment means grouping threshold</display-name>
+                <display-name xml:lang="es">Umbral de agrupación para medios de pago</display-name>
+                <display-name xml:lang="pt">Limite de agrupamento para meios de pagamento</display-name>
+                <display-name xml:lang="fr">Seuil de regroupement des moyens de paiement</display-name>
+                <description xml:lang="x-default">Number of means of payment from which they will be grouped.</description>
+                <description xml:lang="es">Númerode medios depago de los que se agruparán.</description>
+                <description xml:lang="pt">Número de meios de pagamento a partir dos quais serão agrupados.</description>
+                <description xml:lang="fr">Nombre de moyens de paiement à partir duquel ils vont être regroupés.</description>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_theme">
+                <display-name xml:lang="x-default">Theme</display-name>
+                <display-name xml:lang="es">Tema</display-name>
+                <display-name xml:lang="pt">Temas</display-name>
+                <display-name xml:lang="fr">Thème</display-name>
+                <description xml:lang="x-default">Select a theme to use to display the Smartform.</description>
+                <description xml:lang="es">Seleccione un tema para usar para mostrar el Smartform.</description>
+                <description xml:lang="pt">Selecione umtema para exibir o Smartform.</description>
+                <description xml:lang="fr">Sélectionnez le thème à utiliser pour afficher le Smartform.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">NEON</display>
+                        <value>NEON</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">CLASSIC</display>
+                        <value>CLASSIC</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_paymentFormUrl">
+                <display-name xml:lang="de">Plattform-URL</display-name>
+                <display-name xml:lang="x-default">Payment page URL</display-name>
+                <display-name xml:lang="es">URL de página de pago</display-name>
+                <display-name xml:lang="fr">URL de la page de paiement</display-name>
+                <description xml:lang="de">Link zur Bezahlungsplattform.</description>
+                <description xml:lang="x-default">Link to the payment page.</description>
+                <description xml:lang="es">Enlace a la página de pago.</description>
+                <description xml:lang="fr">URL vers laquelle l'acheteur sera redirigé pour le paiement.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://secure.lyra.com/vads-payment/</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_hmac_sha_256_staging">
+                <display-name xml:lang="de">Schlüssel HMAC-SHA-256 für Test</display-name>
+                <display-name xml:lang="x-default">HMAC-SHA-256 test key</display-name>
+                <display-name xml:lang="es">Clave HMAC-SHA-256 de test</display-name>
+                <display-name xml:lang="fr">Clé HMAC-SHA-256 de test</display-name>
+                <description xml:lang="de">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="x-default">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="es">Disponible en el Back Office Lyra expert (menú: Configuración > Tiendas > Claves de API REST).</description>
+                <description xml:lang="fr">Disponible dans votre Back Office Lyra Expert (menu: Paramétrage > Boutiques > Clés d'API REST).</description>
+                <type>password</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_hmac_sha_256_production">
+                <display-name xml:lang="de">Schlüssel HMAC-SHA-256 für Produktion</display-name>
+                <display-name xml:lang="x-default">HMAC-SHA-256 production key</display-name>
+                <display-name xml:lang="es">Clave HMAC-SHA-256 de producción</display-name>
+                <display-name xml:lang="fr">Clé HMAC-SHA-256 de production</display-name>
+                <description xml:lang="de">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="x-default">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="es">Disponible en el Back Office Lyra expert (menú: Configuración > Tiendas > Claves de API REST).</description>
+                <description xml:lang="fr">Disponible dans votre Back Office Lyra Expert (menu: Paramétrage > Boutiques > Clés d'API REST).</description>
+                <type>password</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_key_staging">
+                <display-name xml:lang="de">Schlüssel im Testbetrieb</display-name>
+                <display-name xml:lang="x-default">Key in test mode</display-name>
+                <display-name xml:lang="es">Clave en modo test</display-name>
+                <display-name xml:lang="fr">Clé en mode test</display-name>
+                <description xml:lang="de">Schlüssel, das von Lyra Collect zu Testzwecken bereitgestellt wird (im Lyra Expert Back Office verfügbar).</description>
+                <description xml:lang="x-default">Key provided by Lyra Collect for test mode (available in Lyra Expert Back Office).</description>
+                <description xml:lang="es">Clave proporcionada por Lyra Collect para modo test (disponible en el Back Office Lyra Expert).</description>
+                <description xml:lang="fr">Clé fournie par Lyra Collect pour le mode test (disponible sur le Back Office Lyra Expert).</description>
+                <type>password</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_key_production">
+                <display-name xml:lang="de">Schlüssel im Produktivbetrieb</display-name>
+                <display-name xml:lang="x-default">Key in production mode</display-name>
+                <display-name xml:lang="es">Clave en modo production</display-name>
+                <display-name xml:lang="fr">Clé en mode production</display-name>
+                <description xml:lang="de">Von Lyra Collect bereitgestelltes Schlüssel (im Lyra Expert Back Office verfügbar, nachdem der Produktionsmodus aktiviert wurde).</description>
+                <description xml:lang="x-default">Key provided by Lyra Collect (available in Lyra Expert Back Office after enabling production mode).</description>
+                <description xml:lang="es">Clave proporcionada por Lyra Collect (disponible en el Back Office Lyra Expert después de habilitar el modo production).</description>
+                <description xml:lang="fr">Clé fournie par Lyra Collect (disponible sur le Back Office Lyra Expert après passage en production).</description>
+                <description xml:lang="pt">have dada pelo Lyra Collect (disponível no Back Office Lyra Expert após passar em produção).</description>
+                <type>password</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_mode">
+                <display-name xml:lang="de">Modus</display-name>
+                <display-name xml:lang="x-default">Mode</display-name>
+                <display-name xml:lang="es">Modo</display-name>
+                <display-name xml:lang="fr">Mode</display-name>
+                <description xml:lang="de">Kontextmodus dieses Moduls.</description>
+                <description xml:lang="x-default">The context mode of this module.</description>
+                <description xml:lang="es">El modo de contexto de este módulo.</description>
+                <description xml:lang="fr">Mode de fonctionnement du module.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">TEST</display>
+                        <value>TEST</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">PRODUCTION</display>
+                        <value>PRODUCTION</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_site_id">
+                <display-name xml:lang="de">Shop ID</display-name>
+                <display-name xml:lang="x-default">Shop ID</display-name>
+                <display-name xml:lang="es">Identificador de tienda</display-name>
+                <display-name xml:lang="fr">Identifiant de la boutique</display-name>
+                <description xml:lang="de">Die Kennung von Lyra Collect bereitgestellt.</description>
+                <description xml:lang="x-default">The identifier provided by Lyra Collect.</description>
+                <description xml:lang="es">El identificador proporcionado por Lyra Collect.</description>
+                <description xml:lang="fr">Identifiant fourni par Lyra Collect.</description>
+                <type>string</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_retry">
+                <display-name xml:lang="x-default">Payment attempts number for cards</display-name>
+                <display-name xml:lang="es">Número de intentos de pago con tarjeta</display-name>
+                <display-name xml:lang="fr">Nombre de tentatives de paiement par cartes</display-name>
+                <description xml:lang="x-default">Maximum number of payment by cards retries after a failed payment (between 0 and 2). If blank, the gateway default value is 2.</description>
+                <description xml:lang="es">Número máximo de intentos de pago con tarjeta después de un pago fallido (entre 0 y 2). Si está en blanco, el valor por defecto del portal es 2.</description>
+                <description xml:lang="fr">Nombre maximum de tentatives de paiement par cartes après un paiement en échec (entre 0 et 2). Si vide, la valeur par défaut de la plateforme est 2.</description>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-value>0.0</min-value>
+                <max-value>2.0</max-value>
+                <default-value>2</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_public_key_staging">
+                <display-name xml:lang="de">Öffentlicher Schlüssel (Test)</display-name>
+                <display-name xml:lang="x-default">Public test key</display-name>
+                <display-name xml:lang="es">Clave pública de test</display-name>
+                <display-name xml:lang="fr">Clé publique de test</display-name>
+                <description xml:lang="de">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="x-default">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="es">Disponible en el Back Office Lyra expert (menú: Configuración > Tiendas > Claves de API REST).</description>
+                <description xml:lang="fr">Disponible dans votre Back Office Lyra Expert (menu: Paramétrage > Boutiques > Clés d'API REST).</description>
+                <type>string</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_public_key_production">
+                <display-name xml:lang="de">Öffentlicher Produktionsschlüssel</display-name>
+                <display-name xml:lang="x-default">Public production key</display-name>
+                <display-name xml:lang="es">Clave pública de producción</display-name>
+                <display-name xml:lang="fr">Clé publique de production</display-name>
+                <description xml:lang="de">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="x-default">Available in your Lyra Expert Back Office (menu: Settings > Shops > REST API keys).</description>
+                <description xml:lang="es">Disponible en el Back Office Lyra expert (menú: Configuración > Tiendas > Claves de API REST).</description>
+                <description xml:lang="fr">Disponible dans votre Back Office Lyra Expert (menu: Paramétrage > Boutiques > Clés d'API REST).</description>
+                <type>string</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="displayInPopin">
+                <display-name xml:lang="de">Display in a pop-in</display-name>
+                <display-name xml:lang="x-default">Display in a pop-in</display-name>
+                <display-name xml:lang="es">Mostrar en una ventana pop-in</display-name>
+                <display-name xml:lang="fr">Afficher dans une pop-in</display-name>
+                <description xml:lang="x-default">If enabled, the selected payment mode will be displayed in a pop-in.</description>
+                <description xml:lang="de">If enabled, the selected payment mode will be displayed in a pop-in.</description>
+                <description xml:lang="es">Si está habilitado, el modo de pago seleccionado se mostrará en una ventanapop-in.</description>
+                <description xml:lang="fr">Si activé, le mode de paiement sélectionné sera affiché dans une pop-in.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_alias_enabled">
+                <display-name xml:lang="de">Zahlung per Alias</display-name>
+                <display-name xml:lang="x-default">Payment by token</display-name>
+                <display-name xml:lang="es">Pago por token</display-name>
+                <display-name xml:lang="fr">Paiement par alias</display-name>
+                <description xml:lang="de">The payment by token allows to pay orders without re-entering bank data at each payment. The "Payment by token" option should be enabled on your Lyra Collect store to use this feature.</description>
+                <description xml:lang="x-default">The payment by token allows to pay orders without re-entering bank data at each payment. The Payment by token option should be enabled on your Lyra store to use this feature.</description>
+                <description xml:lang="es">El pago por token permite pagar pedidos sin reingresar datos bancarios en cada pago. La opción "Pago por token" debe estar habilitada en su tienda Lyra Collect para usar esta función.</description>
+                <description xml:lang="fr">Le paiement par alias permet de régler une commande sans resaisir les données bancaires à chaque paiement. L'option "Paiement par alias" doit être activée sur votre boutique Lyra Collect pour utiliser cette fonctionnalité.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_compact_mode">
+                <display-name xml:lang="x-default">Compact mode</display-name>
+                <display-name xml:lang="fr">Mode Compact</display-name>
+                <display-name xml:lang="es">Modo Compacto</display-name>
+                <display-name xml:lang="pt">Modo Compacto</display-name>
+                <description xml:lang="x-default">This option allows to display the smartForm in a compact mode.</description>
+                <description xml:lang="de">This option allows to display the smartForm in a compact mode.</description>
+                <description xml:lang="fr">Cette option permet d'afficher le Smartform en mode compact.</description>
+                <description xml:lang="es">Esta opción muestra el Smartform en modo compacto.</description>
+                <description xml:lang="pt">Esta opção permite exibiro Smartform em modo compacto.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_automatic_return">
+                <display-name xml:lang="de">Automatische Weiterleitung</display-name>
+                <display-name xml:lang="x-default">Automatic redirection</display-name>
+                <display-name xml:lang="es">Redirección automática</display-name>
+                <display-name xml:lang="fr">Redirection automatique</display-name>
+                <description xml:lang="de">Ist diese Einstellung aktiviert, wird der Kunde am Ende des Bezahlvorgangs automatisch auf Ihre Seite weitergeleitet.</description>
+                <description xml:lang="x-default">If enabled, the buyer is automatically redirected to your site at the end of the payment.</description>
+                <description xml:lang="es">Si está habilitada, el comprador es redirigido automáticamente a su sitio al final del pago.</description>
+                <description xml:lang="fr">Si activée, l'acheteur sera redirigé automatiquement vers votre site à la fin du paiement.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_timeout_redirection_success">
+                <display-name xml:lang="de">Zeitbeschränkung Weiterleitung im Erfolgsfall</display-name>
+                <display-name xml:lang="x-default">Redirection timeout on success</display-name>
+                <display-name xml:lang="es">Tiempo de espera de la redirección en pago exitoso</display-name>
+                <display-name xml:lang="fr">Temps avant redirection (succès)</display-name>
+                <description xml:lang="de">Zeitspanne in Sekunden (0-300) bis zur automatischen Weiterleitung des Kunden auf Ihre Seite nach erfolgter Zahlung.</description>
+                <description xml:lang="x-default">Time in seconds (0-300) before the buyer is automatically redirected to your website after a successful payment.</description>
+                <description xml:lang="es">Tiempo en segundos (0-300) antes de que el comprador sea redirigido automáticamente a su sitio web después de un pago exitoso.</description>
+                <description xml:lang="fr">Temps en secondes (0-300) avant que l'acheteur ne soit redirigé automatiquement vers votre site lorsque le paiement a réussi.</description>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-value>0.0</min-value>
+                <max-value>300.0</max-value>
+                <default-value>5</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_redirection_message_success">
+                <display-name xml:lang="de">Weiterleitungs-Nachricht im Erfolgsfall</display-name>
+                <display-name xml:lang="x-default">Redirection message on success</display-name>
+                <display-name xml:lang="es">Mensaje de redirección en pago exitoso</display-name>
+                <display-name xml:lang="fr">Message avant redirection (succès)</display-name>
+                <description xml:lang="de">Nachricht, die nach erfolgter Zahlung und vor der Weiterleitung auf der Plattform angezeigt wird.</description>
+                <description xml:lang="x-default">Message displayed on the payment page prior to redirection after a successful payment.</description>
+                <description xml:lang="es">Mensaje mostrado en la página de pago antes de la redirección después de un pago exitoso.</description>
+                <description xml:lang="fr">Message affiché sur la page de paiement avant redirection lorsque le paiement a réussi.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_timeout_redirection_failure">
+                <display-name xml:lang="de">Zeitbeschränkung Weiterleitung nach Ablehnung</display-name>
+                <display-name xml:lang="x-default">Redirection timeout on failure</display-name>
+                <display-name xml:lang="es">Tiempo de espera de la redirección en pago rechazado</display-name>
+                <display-name xml:lang="fr">Temps avant redirection (échec)</display-name>
+                <description xml:lang="de">Zeitspanne in Sekunden (0-300) bis zur automatischen Weiterleitung des Kunden auf Ihre Seite nach fehlgeschlagener Zahlung.</description>
+                <description xml:lang="x-default">Time in seconds (0-300) before the buyer is automatically redirected to your website after a declined payment.</description>
+                <description xml:lang="es">Tiempo en segundos (0-300) antes de que el comprador sea redirigido automáticamente a su sitio web después de un pago rechazado.</description>
+                <description xml:lang="fr">Temps en secondes (0-300) avant que l'acheteur ne soit redirigé automatiquement vers votre site lorsque le paiement a échoué.</description>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-value>0.0</min-value>
+                <max-value>300.0</max-value>
+                <default-value>5</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_redirection_message_failure">
+                <display-name xml:lang="de">Weiterleitungs-Nachricht nach Ablehnung</display-name>
+                <display-name xml:lang="x-default">Redirection message on failure</display-name>
+                <display-name xml:lang="es">Mensaje de redirección en pago rechazado</display-name>
+                <display-name xml:lang="fr">Message avant redirection (échec)</display-name>
+                <description xml:lang="de">Nachricht, die nach fehlgeschlagener Zahlung und vor der Weiterleitung auf der Plattform angezeigt wird.</description>
+                <description xml:lang="x-default">Message displayed on the payment page prior to redirection after a declined payment.</description>
+                <description xml:lang="es">Mensaje mostrado en la página de pago antes de la redirección después de un pago rechazado.</description>
+                <description xml:lang="fr">Message affiché sur la page de paiement avant redirection lorsque le paiement a échoué.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_return_mode">
+                <display-name xml:lang="de">Übermittlungs-Modus</display-name>
+                <display-name xml:lang="x-default">Return mode</display-name>
+                <display-name xml:lang="es">Modo de retorno</display-name>
+                <display-name xml:lang="fr">Mode de retour</display-name>
+                <description xml:lang="de">Methode, die zur Übermittlung des Zahlungsergebnisses von der Zahlungsschnittstelle an Ihren Shop verwendet wird.</description>
+                <description xml:lang="x-default">Method that will be used for transmitting the payment result from the payment page to your shop.</description>
+                <description xml:lang="es">Método que se usará para transmitir el resultado del pago de la página de pago a su tienda.</description>
+                <description xml:lang="fr">Façon dont l'acheteur transmettra le résultat du paiement lors de son retour à la boutique.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">GET</display>
+                        <value>GET</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">POST</display>
+                        <value>POST</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_validation_mode">
+                <display-name xml:lang="de">Bestätigungsmodus</display-name>
+                <display-name xml:lang="x-default">Validation mode</display-name>
+                <display-name xml:lang="es">Modo de validación</display-name>
+                <display-name xml:lang="fr">Mode de validation</display-name>
+                <description xml:lang="x-default">If manual is selected, you will have to confirm payments manually in your Lyra Expert Back Office.</description>
+                <description xml:lang="es">Si se selecciona manual, deberá confirmar los pagos manualmente en su Back Office Lyra Expert.</description>
+                <description xml:lang="fr">En mode manuel, vous devrez confirmer les paiements dans le Back Office Lyra Expert.</description>
+                <description xml:lang="de">Bei manueller Eingabe müssen Sie Zahlungen manuell in Ihr Lyra Expert Back Office bestätigen.</description>
+
+                <type>enum-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="de">Automatisch</display>
+                        <display xml:lang="x-default">Automatic</display>
+                        <display xml:lang="es">Automático</display>
+                        <display xml:lang="fr">Automatique</display>
+                        <value>NO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="de">Manuell</display>
+                        <display xml:lang="x-default">Manual</display>
+                        <display xml:lang="es">Manual</display>
+                        <display xml:lang="fr">Manuelle</display>
+                        <value>YES</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="de">Back Office Konfiguration</display>
+                        <display xml:lang="x-default">Lyra Expert Back Office configuration</display>
+                        <display xml:lang="es">Configuración de Back Office</display>
+                        <display xml:lang="fr">Configuration Back Office Lyra Expert</display>
+                        <value>null</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_embedded_mode">
+                <display-name xml:lang="x-default">Card data entry mode</display-name>
+                <display-name xml:lang="es">Modo de ingreso de datos de pago</display-name>
+                <display-name xml:lang="fr">Mode de saisie des données de paiement</display-name>
+                <description xml:lang="de">Wählen Sie die Eingabeart der Kreditkartendaten aus.</description>
+                <description xml:lang="x-default">Select how the payment data will be entered.</description>
+                <description xml:lang="es">Seleccione la forma en que se ingresarán los datos de pago.</description>
+                <description xml:lang="fr">Sélectionner la manière dont seront saisies les données de paiement.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="de">Eingebettete Smartform erweitert Zahlungsfelder auf Händlerwebseite</display>
+                        <display xml:lang="x-default">Embedded Smartform extended on merchant site</display>
+                        <display xml:lang="es">Smartform extendido incrustado en el sitio web vendedor</display>
+                        <display xml:lang="fr">Smartform étendu embarqué sur le site marchand</display>
+                        <value>smartform_etendu</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="de">Eingebettete Smartform Zahlungsfelder auf Händlerwebseite</display>
+                        <display xml:lang="x-default">Embedded Smartform on merchant site</display>
+                        <display xml:lang="es">Smartform incrustado en el sitio web vendedor</display>
+                        <display xml:lang="fr">Smartform embarqué sur le site marchand</display>
+                        <value>smartform</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_smartFormPaymentMethods">
+                <display-name xml:lang="x-default">Card Types</display-name>
+                <display-name xml:lang="fr">Types de carte</display-name>
+                <display-name xml:lang="es">Tipos de tarjeta</display-name>
+                <display-name xml:lang="de">Kartentypen</display-name>
+                <description xml:lang="de">Wählen Sie die zur Zahlung verfügbaren Kartentypen aus. Nichts auswählen, um die Einstellungen der Plattform zu verwenden.</description>
+                <description xml:lang="x-default">The card type(s) that can be used for the payment. Select none to use gateway configuration.</description>
+                <description xml:lang="es">El tipo(s) de tarjeta que se puede usar para el pago. No haga ninguna selección para usar la configuración del portal.</description>
+                <description xml:lang="fr">Le(s) type(s) de carte pouvant être utilisé(s) pour le paiement. Ne rien sélectionner pour utiliser la configuration de la plateforme.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <select-multiple-flag>true</select-multiple-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">CB</display>
+                        <display xml:lang="fr">CB</display>
+                        <value>CB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">e-Carte Bleue</display>
+                        <display xml:lang="fr">e-Carte Bleue</display>
+                        <value>E-CARTEBLEUE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Maestro</display>
+                        <display xml:lang="fr">Maestro</display>
+                        <value>MAESTRO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Mastercard</display>
+                        <display xml:lang="fr">Mastercard</display>
+                        <value>MASTERCARD</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Visa</display>
+                        <display xml:lang="fr">Visa</display>
+                        <value>VISA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Visa Electron</display>
+                        <display xml:lang="fr">Visa Electron</display>
+                        <value>VISA_ELECTRON</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">V PAY</display>
+                        <display xml:lang="fr">V PAY</display>
+                        <value>VPAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">American Express</display>
+                        <display xml:lang="fr">American Express</display>
+                        <value>AMEX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cartes Enseignes Partenaires</display>
+                        <display xml:lang="fr">Cartes Enseignes Partenaires</display>
+                        <value>ACCORD_STORE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cartes Enseignes Partenaires (sandbox)</display>
+                        <display xml:lang="fr">Cartes Enseignes Partenaires (sandbox)</display>
+                        <value>ACCORD_STORE_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte myalinea</display>
+                        <display xml:lang="fr">Carte myalinea</display>
+                        <value>ALINEA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Alinéa</display>
+                        <display xml:lang="fr">Carte Cadeau Alinéa</display>
+                        <value>ALINEA_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Alinéa (sandbox)</display>
+                        <display xml:lang="fr">Carte Cadeau Alinéa (sandbox)</display>
+                        <value>ALINEA_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte myalinea (sandbox)</display>
+                        <display xml:lang="fr">Carte myalinea (sandbox)</display>
+                        <value>ALINEA_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alipay</display>
+                        <display xml:lang="fr">Alipay</display>
+                        <value>ALIPAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Allobébé</display>
+                        <display xml:lang="fr">Carte Cadeau Allobébé</display>
+                        <value>ALLOBEBE_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Allobébé (sandbox)</display>
+                        <display xml:lang="fr">Carte Cadeau Allobébé (sandbox)</display>
+                        <value>ALLOBEBE_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Apetiz</display>
+                        <display xml:lang="fr">Apetiz</display>
+                        <value>APETIZ</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Apple Pay</display>
+                        <display xml:lang="fr">Apple Pay</display>
+                        <value>APPLE_PAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Auchan</display>
+                        <display xml:lang="fr">Carte Auchan</display>
+                        <value>AUCHAN</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Auchan (sandbox)</display>
+                        <display xml:lang="fr">Carte Auchan (sandbox)</display>
+                        <value>AUCHAN_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cpay Aurore</display>
+                        <display xml:lang="fr">Cpay Aurore</display>
+                        <value>AURORE-MULTI</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Bancontact Mistercash</display>
+                        <display xml:lang="fr">Bancontact Mistercash</display>
+                        <value>BANCONTACT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Bizum</display>
+                        <display xml:lang="fr">Bizum</display>
+                        <value>BIZUM</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Bizzbee</display>
+                        <display xml:lang="fr">Carte Cadeau Bizzbee</display>
+                        <value>BIZZBEE_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Bizzbee (sandbox)</display>
+                        <display xml:lang="fr">Carte Cadeau Bizzbee (sandbox)</display>
+                        <value>BIZZBEE_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte b+</display>
+                        <display xml:lang="fr">Carte b+</display>
+                        <value>BOULANGER</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte b+ (sandbox)</display>
+                        <display xml:lang="fr">Carte b+ (sandbox)</display>
+                        <value>BOULANGER_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Brice</display>
+                        <display xml:lang="fr">Carte Cadeau Brice</display>
+                        <value>BRICE_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Brice (sandbox)</display>
+                        <display xml:lang="fr">Carte Cadeau Brice (sandbox)</display>
+                        <value>BRICE_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">But</display>
+                        <display xml:lang="fr">But</display>
+                        <value>BUT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">CA DO Carte</display>
+                        <display xml:lang="fr">CA DO Carte</display>
+                        <value>CA_DO_CARTE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cabal</display>
+                        <display xml:lang="fr">Cabal</display>
+                        <value>CABAL</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carnet</display>
+                        <display xml:lang="fr">Carnet</display>
+                        <value>CARNET</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Chèque Déjeuner</display>
+                        <display xml:lang="fr">Chèque Déjeuner</display>
+                        <value>CHQ_DEJ</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Comtesse du Barry</display>
+                        <display xml:lang="fr">Carte Cadeau Comtesse du Barry</display>
+                        <value>COM_BARRY_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Comtesse du Barry (sandbox)</display>
+                        <display xml:lang="fr">Carte Cadeau Comtesse du Barry (sandbox)</display>
+                        <value>COM_BARRY_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Conecs</display>
+                        <display xml:lang="fr">Conecs</display>
+                        <value>CONECS</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Conforama</display>
+                        <display xml:lang="fr">Conforama</display>
+                        <value>CONFORAMA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cora</display>
+                        <display xml:lang="fr">Cora</display>
+                        <value>CORA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cora blanche</display>
+                        <display xml:lang="fr">Cora blanche</display>
+                        <value>CORA_BLANCHE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cora Visa Premier</display>
+                        <display xml:lang="fr">Cora Visa Premier</display>
+                        <value>CORA_PREM</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cora Visa</display>
+                        <display xml:lang="fr">Cora Visa</display>
+                        <value>CORA_VISA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Chèque-Vacances Connect</display>
+                        <display xml:lang="fr">Chèque-Vacances Connect</display>
+                        <value>CVCO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Diners</display>
+                        <display xml:lang="fr">Diners</display>
+                        <value>DINERS</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Discover</display>
+                        <display xml:lang="fr">Discover</display>
+                        <value>DISCOVER</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">EC Card</display>
+                        <display xml:lang="fr">EC Card</display>
+                        <value>ECCARD</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ticket Restaurant</display>
+                        <display xml:lang="fr">Ticket Restaurant</display>
+                        <value>EDENRED</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ticket EcoCheque</display>
+                        <display xml:lang="fr">Ticket EcoCheque</display>
+                        <value>EDENRED_EC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ticket Sport &amp; Culture</display>
+                        <display xml:lang="fr">Ticket Sport &amp; Culture</display>
+                        <value>EDENRED_SC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ticket Compliments</display>
+                        <display xml:lang="fr">Ticket Compliments</display>
+                        <value>EDENRED_TC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ticket Restaurant</display>
+                        <display xml:lang="fr">Ticket Restaurant</display>
+                        <value>EDENRED_TR</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Elo</display>
+                        <display xml:lang="fr">Elo</display>
+                        <value>ELO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 3 fois</display>
+                        <display xml:lang="fr">Paiement en 3 fois</display>
+                        <value>FRANFINANCE_3X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 4 fois</display>
+                        <display xml:lang="fr">Paiement en 4 fois</display>
+                        <value>FRANFINANCE_4X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 3 fois CB</display>
+                        <display xml:lang="fr">Paiement en 3 fois CB</display>
+                        <value>FULLCB3X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 4 fois CB</display>
+                        <display xml:lang="fr">Paiement en 4 fois CB</display>
+                        <value>FULLCB4X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Gémo</display>
+                        <display xml:lang="fr">Carte Cadeau Gémo</display>
+                        <value>GEMO_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Gémo (sandbox)</display>
+                        <display xml:lang="fr">Carte Cadeau Gémo (sandbox)</display>
+                        <value>GEMO_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Giropay</display>
+                        <display xml:lang="fr">Giropay</display>
+                        <value>GIROPAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Google Pay</display>
+                        <display xml:lang="fr">Google Pay</display>
+                        <value>GOOGLEPAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Hiper</display>
+                        <display xml:lang="fr">Hiper</display>
+                        <value>HIPER</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Hipercard</display>
+                        <display xml:lang="fr">Hipercard</display>
+                        <value>HIPERCARD</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">iDEAL</display>
+                        <display xml:lang="fr">iDEAL</display>
+                        <value>IDEAL</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Illicado</display>
+                        <display xml:lang="fr">Carte Illicado</display>
+                        <value>ILLICADO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Illicado (sandbox)</display>
+                        <display xml:lang="fr">Carte Illicado (sandbox)</display>
+                        <value>ILLICADO_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Virement SEPA</display>
+                        <display xml:lang="fr">Virement SEPA</display>
+                        <value>IP_WIRE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Virement SEPA Instantané</display>
+                        <display xml:lang="fr">Virement SEPA Instantané</display>
+                        <value>IP_WIRE_INST</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">JCB</display>
+                        <display xml:lang="fr">JCB</display>
+                        <value>JCB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Joué Club</display>
+                        <display xml:lang="fr">Carte Cadeau Joué Club</display>
+                        <value>JOUECLUB_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Joué Club (sandbox)</display>
+                        <display xml:lang="fr">Carte Cadeau Joué Club (sandbox)</display>
+                        <value>JOUECLUB_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Jules</display>
+                        <display xml:lang="fr">Carte Cadeau Jules</display>
+                        <value>JULES_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Jules (sandbox)</display>
+                        <display xml:lang="fr">Carte Cadeau Jules (sandbox)</display>
+                        <value>JULES_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Reglo</display>
+                        <display xml:lang="fr">Carte Reglo</display>
+                        <value>LECLERC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Maison Financement</display>
+                        <display xml:lang="fr">Carte Maison Financement</display>
+                        <value>LEROY-MERLIN</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Maison Financement (sandbox)</display>
+                        <display xml:lang="fr">Carte Maison Financement (sandbox)</display>
+                        <value>LEROY-MERLIN_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">MasterPass</display>
+                        <display xml:lang="fr">MasterPass</display>
+                        <value>MASTERPASS</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Mastercard Cordobesa</display>
+                        <display xml:lang="fr">Mastercard Cordobesa</display>
+                        <value>MC_CORDOBESA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Multibanco</display>
+                        <display xml:lang="fr">Multibanco</display>
+                        <value>MULTIBANCO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">MyBank</display>
+                        <display xml:lang="fr">MyBank</display>
+                        <value>MYBANK</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Naranja</display>
+                        <display xml:lang="fr">Naranja</display>
+                        <value>NARANJA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Norauto option Financement</display>
+                        <display xml:lang="fr">Carte Norauto option Financement</display>
+                        <value>NORAUTO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Norauto option Financement (sandbox)</display>
+                        <display xml:lang="fr">Carte Norauto option Financement (sandbox)</display>
+                        <value>NORAUTO_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 10 ou 12 fois Oney</display>
+                        <display xml:lang="fr">Paiement en 10 ou 12 fois Oney</display>
+                        <value>ONEY_10X_12X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 3 ou 4 fois Oney</display>
+                        <display xml:lang="fr">Paiement en 3 ou 4 fois Oney</display>
+                        <value>ONEY_3X_4X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cartes enseignes Oney</display>
+                        <display xml:lang="fr">Cartes enseignes Oney</display>
+                        <value>ONEY_ENSEIGNE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Pay Later Oney</display>
+                        <display xml:lang="fr">Pay Later Oney</display>
+                        <value>ONEY_PAYLATER</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paydirekt</display>
+                        <display xml:lang="fr">Paydirekt</display>
+                        <value>PAYDIREKT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">PayPal</display>
+                        <display xml:lang="fr">PayPal</display>
+                        <value>PAYPAL</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">PayPal Sandbox</display>
+                        <display xml:lang="fr">PayPal Sandbox</display>
+                        <value>PAYPAL_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Picwic</display>
+                        <display xml:lang="fr">Carte Picwic</display>
+                        <value>PICWIC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Picwic (sandbox)</display>
+                        <display xml:lang="fr">Carte Picwic (sandbox)</display>
+                        <value>PICWIC_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">PostFinance Card</display>
+                        <display xml:lang="fr">PostFinance Card</display>
+                        <value>POSTFINANCE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">PostFinance E-Finance</display>
+                        <display xml:lang="fr">PostFinance E-Finance</display>
+                        <value>POSTFINANCE_EFIN</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Presto</display>
+                        <display xml:lang="fr">Presto</display>
+                        <value>PRESTO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Przelewy24</display>
+                        <display xml:lang="fr">Przelewy24</display>
+                        <value>PRZELEWY24</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">S-money</display>
+                        <display xml:lang="fr">S-money</display>
+                        <value>S-MONEY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Virement SEPA</display>
+                        <display xml:lang="fr">Virement SEPA</display>
+                        <value>SCT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">SEPA direct debit</display>
+                        <display xml:lang="fr">SEPA direct debit</display>
+                        <value>SDD</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Pass Restaurant</display>
+                        <display xml:lang="fr">Pass Restaurant</display>
+                        <value>SODEXO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Sofort</display>
+                        <display xml:lang="fr">Sofort</display>
+                        <value>SOFORT_BANKING</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Sorocred</display>
+                        <display xml:lang="fr">Sorocred</display>
+                        <value>SOROCRED</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">UnionPay</display>
+                        <display xml:lang="fr">UnionPay</display>
+                        <value>UNION_PAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau VillaVerde</display>
+                        <display xml:lang="fr">Carte Cadeau VillaVerde</display>
+                        <value>VILLAVERDE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau VillaVerde (sandbox)</display>
+                        <display xml:lang="fr">Carte Cadeau VillaVerde (sandbox)</display>
+                        <value>VILLAVERDE_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">WeChat Pay</display>
+                        <display xml:lang="fr">WeChat Pay</display>
+                        <value>WECHAT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 1 fois</display>
+                        <display xml:lang="fr">Alma en 1 fois</display>
+                        <value>ALMA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 10 fois</display>
+                        <display xml:lang="fr">Alma en 10 fois</display>
+                        <value>ALMA_10X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 12 fois</display>
+                        <display xml:lang="fr">Alma en 12 fois</display>
+                        <value>ALMA_12X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 2 fois</display>
+                        <display xml:lang="fr">Alma en 2 fois</display>
+                        <value>ALMA_2X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 3 fois</display>
+                        <display xml:lang="fr">Alma en 3 fois</display>
+                        <value>ALMA_3X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 4 fois</display>
+                        <display xml:lang="fr">Alma en 4 fois</display>
+                        <value>ALMA_4X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Kadeos Culture</display>
+                        <display xml:lang="fr">Carte Kadeos Culture</display>
+                        <value>KADEOS_CULTURE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Kadéos Zénith</display>
+                        <display xml:lang="fr">Carte Kadéos Zénith</display>
+                        <value>KADEOS_GIFT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Payconiq</display>
+                        <display xml:lang="fr">Payconiq</display>
+                        <value>PAYCONIQ</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">UPI</display>
+                        <display xml:lang="fr">UPI</display>
+                        <value>UPI</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Lyra - General configuration">
+                <display-name xml:lang="x-default">Lyra Collect - General configuration</display-name>
+                <display-name xml:lang="en">Lyra Collect - General configuration</display-name>
+                <display-name xml:lang="fr">Lyra Collect - Configuration générale</display-name>
+                <display-name xml:lang="es">Lyra Collect - Configuración general</display-name>
+                <display-name xml:lang="de">Lyra Collect - Allgemeine Konfiguration</display-name>
+                <attribute attribute-id="lyra_site_id"/>
+                <attribute attribute-id="lyra_key_staging"/>
+                <attribute attribute-id="lyra_key_production"/>
+                <attribute attribute-id="lyra_mode"/>
+                <attribute attribute-id="lyra_api_password_staging"/>
+                <attribute attribute-id="lyra_api_password_production"/>
+                <attribute attribute-id="lyra_public_key_staging"/>
+                <attribute attribute-id="lyra_public_key_production"/>
+                <attribute attribute-id="lyra_hmac_sha_256_staging"/>
+                <attribute attribute-id="lyra_hmac_sha_256_production"/>
+                <attribute attribute-id="lyra_js_lib_url"/>
+                <attribute attribute-id="lyra_validation_mode"/>
+            </attribute-group>
+            <attribute-group group-id="Lyra Collect - Redirection payment">
+                <display-name xml:lang="x-default">Lyra Collect - Redirection payment</display-name>
+                <display-name xml:lang="fr">Lyra Collect - Paiement par redirection</display-name>
+                <display-name xml:lang="es">Lyra Collect - Pago por redirección</display-name>
+                <display-name xml:lang="de">Lyra Collect - Zahlungs-Weiterleitung</display-name>
+                <attribute attribute-id="lyra_paymentFormUrl"/>
+                <attribute attribute-id="lyra_automatic_return"/>
+                <attribute attribute-id="lyra_timeout_redirection_success"/>
+                <attribute attribute-id="lyra_redirection_message_success"/>
+                <attribute attribute-id="lyra_timeout_redirection_failure"/>
+                <attribute attribute-id="lyra_redirection_message_failure"/>
+                <attribute attribute-id="lyra_return_mode"/>
+            </attribute-group>
+            <attribute-group group-id="Lyra Collect - Payment with embedded fields">
+                <display-name xml:lang="x-default">Lyra Collect - Payment with embedded fields</display-name>
+                <display-name xml:lang="fr">Lyra Collect - Paiement avec champs embarqués</display-name>
+                <display-name xml:lang="es">Lyra Collect - Pago con campos incrustados</display-name>
+                <display-name xml:lang="de">Lyra Collect - Zahlung über eingebettete Felder</display-name>
+                <attribute attribute-id="displayInPopin"/>
+                <attribute attribute-id="lyra_embedded_mode"/>
+                <attribute attribute-id="lyra_alias_enabled"/>
+                <attribute attribute-id="lyra_retry"/>
+                <attribute attribute-id="lyra_compact_mode"/>
+                <attribute attribute-id="lyra_smartFormPaymentMethods"/>
+                <attribute attribute-id="lyra_theme"/>
+                <attribute attribute-id="lyra_groupingthreshold"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="PaymentMethod">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="lyra_mode_validation">
+                <display-name xml:lang="de">Bestätigungsmodus</display-name>
+                <display-name xml:lang="x-default">Lyra - Mode de Validation</display-name>
+                <display-name xml:lang="fr">Mode de validation</display-name>
+                <type>enum-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="de">Automatisch</display>
+                        <display xml:lang="x-default">Automatic</display>
+                        <display xml:lang="es">Automático</display>
+                        <display xml:lang="fr">Automatique</display>
+                        <value>NO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="de">Manuell</display>
+                        <display xml:lang="x-default">Manual</display>
+                        <display xml:lang="es">Manual</display>
+                        <display xml:lang="fr">Manual</display>
+                        <value>YES</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="de">Back Office Konfiguration</display>
+                        <display xml:lang="x-default">Lyra Expert Back Office configuration</display>
+                        <display xml:lang="es">Configuración de Back Office</display>
+                        <display xml:lang="fr">Configuration Back Office Lyra Expert</display>
+                        <value>null</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="lyra_methode_paiement">
+                <display-name xml:lang="de">Zahlungsmittel</display-name>
+                <display-name xml:lang="x-default">Means of payment</display-name>
+                <display-name xml:lang="fr">Moyen de paiement</display-name>
+                <display-name xml:lang="es">Medio de pago</display-name>
+                <type>enum-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">CB</display>
+                        <value>CB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">e-Carte Bleue</display>
+                        <value>E-CARTEBLEUE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Maestro</display>
+                        <value>MAESTRO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Mastercard</display>
+                        <value>MASTERCARD</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Visa</display>
+                        <value>VISA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Visa Electron</display>
+                        <value>VISA_ELECTRON</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">V PAY</display>
+                        <value>VPAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">American Express</display>
+                        <value>AMEX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cartes Enseignes Partenaires</display>
+                        <value>ACCORD_STORE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cartes Enseignes Partenaires (sandbox)</display>
+                        <value>ACCORD_STORE_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte myalinea</display>
+                        <value>ALINEA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Alinéa</display>
+                        <value>ALINEA_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Alinéa (sandbox)</display>
+                        <value>ALINEA_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte myalinea (sandbox)</display>
+                        <value>ALINEA_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alipay</display>
+                        <value>ALIPAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Allobébé</display>
+                        <value>ALLOBEBE_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Allobébé (sandbox)</display>
+                        <value>ALLOBEBE_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Apetiz</display>
+                        <value>APETIZ</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Apple Pay</display>
+                        <value>APPLE_PAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Auchan</display>
+                        <value>AUCHAN</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Auchan (sandbox)</display>
+                        <value>AUCHAN_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cpay Aurore</display>
+                        <value>AURORE-MULTI</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Bancontact Mistercash</display>
+                        <value>BANCONTACT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Bizum</display>
+                        <value>BIZUM</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Bizzbee</display>
+                        <value>BIZZBEE_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Bizzbee (sandbox)</display>
+                        <value>BIZZBEE_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte b+</display>
+                        <value>BOULANGER</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte b+ (sandbox)</display>
+                        <value>BOULANGER_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Brice</display>
+                        <value>BRICE_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Brice (sandbox)</display>
+                        <value>BRICE_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">But</display>
+                        <value>BUT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">CA DO Carte</display>
+                        <value>CA_DO_CARTE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cabal</display>
+                        <value>CABAL</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carnet</display>
+                        <value>CARNET</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Chèque Déjeuner</display>
+                        <value>CHQ_DEJ</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Comtesse du Barry</display>
+                        <value>COM_BARRY_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Comtesse du Barry (sandbox)</display>
+                        <value>COM_BARRY_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Conecs</display>
+                        <value>CONECS</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Conforama</display>
+                        <value>CONFORAMA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cora</display>
+                        <value>CORA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cora blanche</display>
+                        <value>CORA_BLANCHE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cora Visa Premier</display>
+                        <value>CORA_PREM</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cora Visa</display>
+                        <value>CORA_VISA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Chèque-Vacances Connect</display>
+                        <value>CVCO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Diners</display>
+                        <value>DINERS</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Discover</display>
+                        <value>DISCOVER</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">EC Card</display>
+                        <value>ECCARD</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ticket Restaurant</display>
+                        <value>EDENRED</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ticket EcoCheque</display>
+                        <value>EDENRED_EC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ticket Sport &amp; Culture</display>
+                        <value>EDENRED_SC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ticket Compliments</display>
+                        <value>EDENRED_TC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ticket Restaurant</display>
+                        <value>EDENRED_TR</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Elo</display>
+                        <value>ELO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 3 fois</display>
+                        <value>FRANFINANCE_3X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 4 fois</display>
+                        <value>FRANFINANCE_4X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 3 fois CB</display>
+                        <value>FULLCB3X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 4 fois CB</display>
+                        <value>FULLCB4X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Gémo</display>
+                        <value>GEMO_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Gémo (sandbox)</display>
+                        <value>GEMO_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Giropay</display>
+                        <value>GIROPAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Google Pay</display>
+                        <value>GOOGLEPAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Hiper</display>
+                        <value>HIPER</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Hipercard</display>
+                        <value>HIPERCARD</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">iDEAL</display>
+                        <value>IDEAL</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Illicado</display>
+                        <value>ILLICADO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Illicado (sandbox)</display>
+                        <value>ILLICADO_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Virement SEPA</display>
+                        <value>IP_WIRE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Virement SEPA Instantané</display>
+                        <value>IP_WIRE_INST</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">JCB</display>
+                        <value>JCB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Joué Club</display>
+                        <value>JOUECLUB_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Joué Club (sandbox)</display>
+                        <value>JOUECLUB_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Jules</display>
+                        <value>JULES_CDX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau Jules (sandbox)</display>
+                        <value>JULES_CDX_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Reglo</display>
+                        <value>LECLERC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Maison Financement</display>
+                        <value>LEROY-MERLIN</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Maison Financement (sandbox)</display>
+                        <value>LEROY-MERLIN_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">MasterPass</display>
+                        <value>MASTERPASS</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Mastercard Cordobesa</display>
+                        <value>MC_CORDOBESA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Multibanco</display>
+                        <value>MULTIBANCO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">MyBank</display>
+                        <value>MYBANK</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Naranja</display>
+                        <value>NARANJA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Norauto option Financement</display>
+                        <value>NORAUTO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Norauto option Financement (sandbox)</display>
+                        <value>NORAUTO_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 10 ou 12 fois Oney</display>
+                        <value>ONEY_10X_12X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paiement en 3 ou 4 fois Oney</display>
+                        <value>ONEY_3X_4X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Cartes enseignes Oney</display>
+                        <value>ONEY_ENSEIGNE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Pay Later Oney</display>
+                        <value>ONEY_PAYLATER</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Paydirekt</display>
+                        <value>PAYDIREKT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">PayPal</display>
+                        <value>PAYPAL</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">PayPal Sandbox</display>
+                        <value>PAYPAL_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Picwic</display>
+                        <value>PICWIC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Picwic (sandbox)</display>
+                        <value>PICWIC_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">PostFinance Card</display>
+                        <value>POSTFINANCE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">PostFinance E-Finance</display>
+                        <value>POSTFINANCE_EFIN</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Presto</display>
+                        <value>PRESTO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Przelewy24</display>
+                        <value>PRZELEWY24</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">S-money</display>
+                        <value>S-MONEY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Virement SEPA</display>
+                        <value>SCT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">SEPA direct debit</display>
+                        <value>SDD</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Pass Restaurant</display>
+                        <value>SODEXO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Sofort</display>
+                        <value>SOFORT_BANKING</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Sorocred</display>
+                        <value>SOROCRED</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">UnionPay</display>
+                        <value>UNION_PAY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau VillaVerde</display>
+                        <value>VILLAVERDE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Cadeau VillaVerde (sandbox)</display>
+                        <value>VILLAVERDE_SB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">WeChat Pay</display>
+                        <value>WECHAT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 1 fois</display>
+                        <display xml:lang="fr">Alma en 1 fois</display>
+                        <value>ALMA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 10 fois</display>
+                        <display xml:lang="fr">Alma en 10 fois</display>
+                        <value>ALMA_10X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 12 fois</display>
+                        <display xml:lang="fr">Alma en 12 fois</display>
+                        <value>ALMA_12X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 2 fois</display>
+                        <display xml:lang="fr">Alma en 2 fois</display>
+                        <value>ALMA_2X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 3 fois</display>
+                        <display xml:lang="fr">Alma en 3 fois</display>
+                        <value>ALMA_3X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Alma en 4 fois</display>
+                        <display xml:lang="fr">Alma en 4 fois</display>
+                        <value>ALMA_4X</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Kadeos Culture</display>
+                        <display xml:lang="fr">Carte Kadeos Culture</display>
+                        <value>KADEOS_CULTURE</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Carte Kadéos Zénith</display>
+                        <display xml:lang="fr">Carte Kadéos Zénith</display>
+                        <value>KADEOS_GIFT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Payconiq</display>
+                        <display xml:lang="fr">Payconiq</display>
+                        <value>PAYCONIQ</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">UPI</display>
+                        <display xml:lang="fr">UPI</display>
+                        <value>UPI</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Lyra">
+                <display-name xml:lang="x-default">Lyra - Configruation for HPP Payment</display-name>
+                <attribute attribute-id="lyra_methode_paiement"/>
+                <attribute attribute-id="lyra_mode_validation"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="Basket">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="lyraOrderNo">
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="lyra">
+                <display-name xml:lang="x-default">lyra</display-name>
+                <attribute attribute-id="lyraOrderNo"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="Order">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="lyraPaymentData">
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="lyra">
+                <display-name xml:lang="x-default">lyra</display-name>
+                <attribute attribute-id="lyraPaymentData"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>
