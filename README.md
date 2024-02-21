@@ -1,6 +1,6 @@
 # Lyra Cartridge for Salesforce Commerce Cloud 
 
-Lyra Cartridge for Salesforce Commerce Cloud links e-commerce websites based on SFCC to Lyra Collect secure payment gateway developed by [Lyra Network](https://www.lyra.com/).
+Lyra Collect Connector for Salesforce B2C Commerce Cloud facilitates integration between the [Lyra Collect](https://docs.lyra.com/en/) secure payment gateway and Salesforce B2C Commerce.
 
 This cartridge enables the following features:
 * Payments by credit cards.
